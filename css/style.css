@@ -1,0 +1,140 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #ffff;
+  font-family: "IBM Plex Mono", monospace;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* Awal header */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+figure {
+  width: 350px;
+  position: relative;
+  z-index: 0;
+}
+
+figure img {
+  margin-top: -100px;
+}
+
+.header h1 {
+  font-family: "Comfortaa", cursive;
+  font-size: 48px;
+  text-align: center;
+  color: rgb(51, 51, 51);
+  margin-top: -80px;
+}
+
+.header h3 {
+  margin-top: -19px;
+}
+/* Akhir header */
+
+/* Awal Kotak HTML CSS */
+.after-figure {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+  margin-top: -30px;
+}
+
+.after-figure p {
+  box-shadow: 5px 5px;
+}
+
+.after-figure .kotak-biru p {
+  border: solid 1px;
+  margin: 10px 1px 12px 20px;
+  padding: 8px 25px;
+  background-color: rgb(139, 211, 221);
+  border-radius: 5px;
+}
+
+.after-figure .kotak-oren p {
+  border: solid 1px;
+  margin: 10px 1px 12px 20px;
+  padding: 8px 25px;
+  background-color: rgb(250, 174, 43);
+  border-radius: 5px;
+}
+
+.after-figure .pemisah {
+  margin: 0px 20px;
+}
+/* Akhir Kotak HTML CSS */
+
+/* Awal KTM */
+.container {
+  width: 520px;
+  border: 1px solid;
+  padding: 15px;
+  box-shadow: 10px 10px;
+  background-color: #f2f7f5;
+  border-radius: 5px;
+}
+
+.data-diri {
+  margin-left: 8px;
+  margin-bottom: 15px;
+}
+
+.foto-profil img{
+    width: 90px;
+    margin-right: 20px;
+    border: solid 1px;
+    border-radius: 5px;
+}
+
+.foto img {
+  width: 80px;
+  margin-top: -24px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: solid 2px;
+  border-radius: 5px;
+}
+
+.header-kartu {
+  text-align: center;
+  margin-bottom: -6px;
+  margin-top: -7px;
+}
+.header-kartu h4 {
+  margin-top: -22px;
+}
+
+.data-diri .data-diri-1 {
+  display: inline;
+}
+/* Akhir KTM */
+
+/* Contact me */
+.contact-me {
+  display: flex;
+  margin-top: 25px;
+}
+
+.contact-me .icon {
+    width: 100px;
+    margin: 20px;
+    transition: all .2s ease-in-out;
+}
+
+.contact-me .icon:hover {
+    transform: scale(1.1);
+}
+
+.contact-me .icon img {
+    max-width: 60px;
+    margin: 20px;
+}
