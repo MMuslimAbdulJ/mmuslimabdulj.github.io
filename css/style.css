@@ -50,22 +50,18 @@ figure img {
 
 .after-figure p {
   box-shadow: 5px 5px rgba(34, 34, 34, 0.952);
+  border: solid 1px;
+  margin: 1px 1px 12px 20px;
+  padding: 8px 25px;
+  border-radius: 5px;
 }
 
 .after-figure .kotak-biru p {
-  border: solid 1px;
-  margin: 10px 1px 12px 20px;
-  padding: 8px 25px;
-  background-color: rgb(250, 174, 43);
-  border-radius: 5px;
+    background-color: rgb(250, 174, 43);
 }
 
 .after-figure .kotak-oren p {
-  border: solid 1px;
-  margin: 10px 1px 12px 20px;
-  padding: 8px 25px;
-  background-color: rgb(139, 211, 221);
-  border-radius: 5px;
+    background-color: rgb(139, 211, 221);
 }
 
 .after-figure .pemisah {
