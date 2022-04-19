@@ -1,0 +1,27 @@
+.persegi {
+    width: 100px;
+    height: 100px;
+    background-color: #f00;
+    border: 1px solid black;
+}
+.persegipanjang {
+    width: 200px;
+    height: 100px;
+    background-color: #0f0;
+    border: 1px solid black;
+}
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 100px solid rgb(204, 255, 0);
+    /* border: 2px solid black; */
+}
+.lingkaran {
+    width: 100px;
+    height: 100px;
+    background-color: #00f;
+    border-radius: 50%;
+    border: 1px solid black;
+}

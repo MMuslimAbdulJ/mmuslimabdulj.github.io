@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous" />
+
+    <link rel="icon" href="" />
+
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Kalkulator</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Kalkulator Bangun Datar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#persegi" data-bs-whatever="@mdo">Persegi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#persegiPanjang" data-bs-whatever="@mdo">Persegi Panjang</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#lingkaran" data-bs-whatever="@mdo">Lingkaran</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#segitiga" data-bs-whatever="@mdo">Segitiga</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="https://mmuslimabdulj.github.io">M Muslim Abdul J</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="https://opendebugger62.wordpress.com">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+          <!-- Akhir -->
+          <div class="container-lg text-center mt-4 m-auto">
+              <!-- <img src="logoCS.png" alt="" width="300"> -->
+              <h1>Tugas Pemrograman WEB</h1>
+              <h2>Menghitung Luas Bangun Datar dengan menggunakan JavaScript</h2>
+              <h3>Muhammad Muslim Abdul Jabbaar</h3>
+          </div>
+
+
+
+
+
+    <!-- Card -->
+    <section id="galeri">
+        <div class="container">
+            <div class="row text-center justify-content-center mt-5">
+                <div class="col">
+                    <h3><u>Pilih Bangun Datar</u></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 text-center mb-3">
+                  <div class="card">
+                    <div class="persegi m-auto mt-4"></div>
+                      <div class="card-body">
+                        <p class="card-text">Persegi</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#persegi" data-bs-whatever="@mdo">Hitung Luas</button>
+                      </div>
+                    </div>
+              </div>
+              <div class="col-md-3 text-center mb-3">
+                <div class="card">
+                  <div class="persegipanjang m-auto mt-4"></div>
+                    <div class="card-body">
+                      <p class="card-text">Persegi Panjang</p>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#persegiPanjang" data-bs-whatever="@mdo">Hitung Luas</button>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md-3 text-center mb-3">
+                <div class="card">
+                  <div class="lingkaran m-auto mt-4"></div>
+                    <div class="card-body">
+                      <p class="card-text">Lingkaran</p>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#lingkaran" data-bs-whatever="@mdo">Hitung Luas</button>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 text-center mb-3">
+              <div class="card">
+                <div class="triangle m-auto mt-4"></div>
+                  <div class="card-body">
+                    <p class="card-text">Segitiga</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#segitiga" data-bs-whatever="@mdo">Hitung Luas</button>
+                  </div>
+                </div>
+          </div>
+            </div>
+        
+    </section>
+    <!-- Akhir Galeri -->
+   
+
+
+<!-- Persegi -->
+<div class="modal body" id="persegi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Persegi</h5>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Masukan nilai sisi:</label>
+            <input type="number" class="form-control" id="persegiS">
+            <button type="button" class="btn btn-primary mt-2" id="btnPersegi" data-bs-toggle="modal" data-bs-target="#persegi" data-bs-whatever="@mdo">Hitung</button>
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Hasilnya:</label>
+            <textarea class="form-control" id="txtPersegi" readonly></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Persegi Panjang-->
+<div class="modal body" id="persegiPanjang" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Persegi Panjang</h5>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Masukan nilai panjang:</label>
+              <input type="number" class="form-control" id="persegiPP">
+            </div>
+            <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Masukan nilai lebar:</label>
+                <input type="number" class="form-control" id="persegiPL">
+                <button type="button" class="btn btn-primary mt-2" id="btnPersegiP" data-bs-toggle="modal" data-bs-target="#persegiPanjang" data-bs-whatever="@mdo">Hitung</button>
+              </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Hasilnya:</label>
+              <textarea class="form-control" id="txtPersegiP" readonly></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Lingkaran -->
+<div class="modal body" id="lingkaran" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Lingkaran</h5>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Masukan nilai jari-jari:</label>
+              <input type="number" class="form-control" id="lingkaranJ">
+              <button type="button" class="btn btn-primary mt-2" id="btnLingkaran" data-bs-toggle="modal" data-bs-target="#lingkaran" data-bs-whatever="@mdo">Hitung</button>
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">hasilnya:</label>
+              <textarea class="form-control" id="txtLingkaran" readonly></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Segitiga -->
+<div class="modal body" id="segitiga" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Segitiga</h5>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Masukan nilai alas:</label>
+              <input type="number" class="form-control" id="segitigaA">
+            </div>
+            <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Masukan nilai tinggi:</label>
+                <input type="number" class="form-control" id="segitigaT">
+                <button type="button" class="btn btn-primary mt-2" id="btnSegitiga" data-bs-toggle="modal" data-bs-target="#segitiga" data-bs-whatever="@mdo">Hitung</button>
+              </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Hasilnya:</label>
+              <textarea class="form-control" id="txtSegitiga" readonly></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- Akhir Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>
