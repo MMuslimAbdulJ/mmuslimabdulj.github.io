@@ -12,40 +12,40 @@ const posts = (await getCollection("blog")).sort(
 
 const last_posts = posts.slice(0, 3);
 
-// const response = await fetch("https://api.github.com/graphql", {
-//   method: "POST",
-//   headers: {
-//     "Content-Type": "aplication/json",
-//     Authorization: `bearer ${TOKEN}`,
-//   },
-//   body: JSON.stringify({
-//     query: `
-//     query MyQuery {
-//   user(login: "MMuslimAbdulJ") {
-//     pinnedItems(first: 6) {
-//       totalCount
-//       edges {
-//         node {
-//           ... on Repository {
-//             id
-//             name
-//             url
-//             description
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-//     `,
-//   }),
-// });
-const json = JSON.stringify(['1','2'])
-const data = await json;
+const response = await fetch("https://api.github.com/graphql", {
+  method: "POST",
+  headers: {
+    "Content-Type": "aplication/json",
+    Authorization: `bearer ${TOKEN}`,
+  },
+  body: JSON.stringify({
+    query: `
+    query MyQuery {
+  user(login: "${import.meta.env.GITHUB_USER}") {
+    pinnedItems(first: 6) {
+      totalCount
+      edges {
+        node {
+          ... on Repository {
+            id
+            name
+            url
+            description
+          }
+        }
+      }
+    }
+  }
+}
+    `,
+  }),
+});
+const json = await response.json();
+const data = await json.data.user.pinnedItems.edges;
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <Ribbon/>
+  <Ribbon />
   <div class="pb-12 -mt-5 md:ml-10">
     <div class="text-xl py-1 md:text-2xl">
       Hey there... <div class="inline animate-pulse">👋</div>
@@ -133,7 +133,7 @@ const data = await json;
     </div>
   </div>
 
-  <!-- <ul class="md:ml-10">
+  <ul class="md:ml-10">
     {
       data.map((data) => (
         <HorizontalCard
@@ -145,7 +145,7 @@ const data = await json;
         />
       ))
     }
-  </ul> -->
+  </ul>
 
   <div>
     <div class="text-3xl w-full font-bold mb-4 mt-10 md:ml-10">
