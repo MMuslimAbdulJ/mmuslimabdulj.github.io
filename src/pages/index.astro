@@ -40,8 +40,8 @@ const response = await fetch("https://api.github.com/graphql", {
     `,
   }),
 });
-// const json = await response.json();
-// const data = await json.data.user.pinnedItems.edges;
+const json = await response.json();
+const data = await json.data.user.pinnedItems.edges;
 ---
 
 <BaseLayout sideBarActiveItemID="home">
