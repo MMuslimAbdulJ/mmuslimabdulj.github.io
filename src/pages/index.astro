@@ -9,8 +9,12 @@ const TOKEN = import.meta.env.GITHUB_TOKEN;
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+const projects = (await getCollection("project")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
 
 const last_posts = posts.slice(0, 3);
+const last_projects = projects.slice(0, 3);
 
 // const response = await fetch("https://api.github.com/graphql", {
 //   method: "POST",
@@ -21,7 +25,7 @@ const last_posts = posts.slice(0, 3);
 //   body: JSON.stringify({
 //     query: `
 //     query MyQuery {
-//   user(login: "${import.meta.env.GITHUB_USER}") {
+//   user(login: "${import.meta.env.GITHUB_USER}"){
 //     pinnedItems(first: 6) {
 //       totalCount
 //       edges {
@@ -42,7 +46,6 @@ const last_posts = posts.slice(0, 3);
 // });
 // const json = await response.json();
 // const data = await json.data.user.pinnedItems.edges;
-const data = await JSON.stringify([1,2,3,4]);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
@@ -127,14 +130,14 @@ const data = await JSON.stringify([1,2,3,4]);
     <div class="text-3xl w-full font-bold mb-2 cursor-pointer md:ml-10">
       <span
         class="text-3xl bg-gradient-to-r from-indigo-500 to-sky-500 bg-[length:100%_5px] bg-no-repeat bg-bottom"
-        >My pinned repositories <span class="hidden md:inline-block"
+        >My last repositories <span class="hidden md:inline-block"
           >{"</>"}</span
         ></span
       >
     </div>
   </div>
 
-  <ul class="md:ml-10">
+  <!-- <ul class="md:ml-10">
     {
       data.map((data) => (
         <HorizontalCard
@@ -146,7 +149,25 @@ const data = await JSON.stringify([1,2,3,4]);
         />
       ))
     }
-  </ul>
+  </ul> -->
+
+  {
+    last_projects.map((project) => (
+      <>
+        <div class="md:ml-10">
+          <HorizontalCard
+            title={project.data.title}
+            img={project.data.heroImage}
+            desc={project.data.description}
+            url={"/project/" + project.slug}
+            target="_self"
+            badge={project.data.badge}
+          />
+        </div>
+        <div class="divider my-0" />
+      </>
+    ))
+  }
 
   <div>
     <div class="text-3xl w-full font-bold mb-4 mt-10 md:ml-10">

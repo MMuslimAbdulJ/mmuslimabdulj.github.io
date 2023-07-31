@@ -22,12 +22,12 @@ const {
   </head>
 
   <body class="scrollbar-hide">
-    <div class="bg-base-100 drawer lg:drawer-open ">
+    <div class="bg-base-100 drawer lg:drawer-open">
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content bg-base-100 shadow-inner shadow-indigo-600/70">
         <Header title={SITE_TITLE} />
         <div class="md:flex md:justify-center">
-          <main class="p-6 pt-10 lg:max-w-[900px] max-w-[100vw] ">
+          <main class="p-6 pt-10 lg:max-w-[900px] max-w-[100vw]">
             <slot />
           </main>
         </div>
@@ -36,7 +36,8 @@ const {
       {includeSidebar && <SideBar sideBarActiveItemID={sideBarActiveItemID} />}
     </div>
     <script
-      src="./tsparticles.confetti.bundle.min.js"
+      is:inline
+      src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.11.0/tsparticles.confetti.bundle.min.js"
     ></script>
     <script>
       let styleSheet = null;
@@ -143,8 +144,6 @@ const {
 
         document.body.append(div);
       };
-
-      // Confetti
       function celebrate() {
         const duration = 15 * 1000,
           animationEnd = Date.now() + duration,
@@ -178,9 +177,11 @@ const {
           );
         }, 250);
       }
-      document.getElementById("startButton").addEventListener('click', function(){
-        celebrate();
-      })
+      document
+        .getElementById("startButton")
+        .addEventListener("click", function () {
+          celebrate();
+        });
     </script>
   </body>
 </html>
