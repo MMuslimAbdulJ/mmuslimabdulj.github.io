@@ -1,0 +1,38 @@
+.time-line-container > div:last-child .education__time > .education__line {
+  display: none;
+}
+/* .blur-container:hover .blur-one:not(:hover) {
+  transition-delay: 1000ms;
+  filter: blur(40px);
+} */
+
+/* .wiggle-container:hover .wiggle-one:hover {
+  animation: wiggle 0.1s ease-out 1s;
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+}
+.spark {
+  position: absolute;
+  width: 30px;
+  height: 8px;
+  border-radius: 3px;
+  background-color: white;
+  transform: none;
+} */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}

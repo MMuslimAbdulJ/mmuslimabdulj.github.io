@@ -1,0 +1,115 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    I'm M Muslim Abdul J, a passionate and
+    dedicated Fullstack Web Developer currently pursuing a degree in Engineering with a major in Informatics Engineering. Proficient in Vue JS and
+    Laravel, I excel at crafting immersive web experiences and dynamic user
+    interfaces. Beyond my core stack, I love exploring projects using Kotlin and
+    Python, offering versatility and adaptability. Engaging in personal projects
+    and open-source contributions, I continuously refine my skills to create
+    innovative solutions that elevate user experiences. Aiming for both academic
+    excellence and practical expertise, my academic journey provides a strong
+    foundation for technology's theoretical aspects. I thrive in collaborative
+    environments and am open to exciting development opportunities. If you seek
+    a motivated and skilled Fullstack Web Developer to bring your ideas to life,
+    let's connect and embark on web development journeys together!
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Universitas Putra Indonesia Cianjur"
+      subtitle="Informatics Engineering (2021), West Java, Indonesia"
+    />
+    <TimeLineElement title="Now" subtitle="" />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Freelance Full Stack Web Developer"
+      subtitle="2022 - Now"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certifications</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <a
+        href="https://www.dicoding.com/certificates/QLZ9K9717Z5D"
+        target="_blank">Dicoding Belajar Dasar Pemrograman Web</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://www.dicoding.com/certificates/N9ZO7RY36ZG5"
+        target="_blank">Dicoding Belajar Membuat Front-End Web untuk Pemula</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://www.dicoding.com/certificates/MEPJK80VLX3V"
+        target="_blank">Dicoding X AWS Belajar Dasar-Dasar DevOps</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://www.dicoding.com/certificates/ERZRGM58OPYV"
+        target="_blank">Dicoding X AWS Belajar Jaringan Komputer untuk Pemula</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://www.dicoding.com/certificates/72ZD8JKEVZYW"
+        target="_blank"
+        >Dicoding X Baparekraf Memulai Pemrograman Dengan Kotlin</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://www.freecodecamp.org/certification/fcc9a5ddbbb-20d8-4dc9-bc50-b6d628c8c295/responsive-web-design"
+        target="_blank">Freecodecamp.org Responsive Web Design</a
+      >
+    </li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Sass</li>
+    <li>JavaScript</li>
+    <li>TypeScript</li>
+    <li>Tailwind CSS</li>
+    <li>Astro JS</li>
+    <li>Vue JS</li>
+    <li>PHP</li>
+    <li>Laravel</li>
+    <li>MySQL</li>
+    <li>NodeJS</li>
+    <li>Kotlin</li>
+    <li>Ktor</li>
+    <li>Python</li>
+    <li>Linux</li>
+  </ul>
+</BaseLayout>

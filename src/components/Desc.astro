@@ -1,0 +1,20 @@
+---
+export interface Props {
+  title: string;
+  desc: string;
+  icon: string;
+}
+const { title, desc, icon } = Astro.props;
+---
+
+<div
+  class="my-5 rounded-xlcursor-pointer shadow-md shadow-indigo-500/75 hover:shadow-lg hover:shadow-indigo-600 cursor-pointer"
+>
+  <div class="p-7 text-center rounded-lg bg-gray-800">
+    <div class="text-4xl mx-auto text-center mb-3">{icon}</div>
+    <h2 class="text-4xl mb-5 font-bold text-center"><span class="bg-gradient-to-r from-indigo-500 to-sky-500 bg-[length:100%_5px] bg-no-repeat bg-bottom">{title}</span></h2>
+    <text class="text-md font-semibold text-justify md:text-xl">
+      {desc}
+    </text>
+  </div>
+</div>
