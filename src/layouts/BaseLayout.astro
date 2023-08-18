@@ -3,7 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import SideBar from "../components/SideBar.astro";
-
+import { ViewTransitions } from "astro:transitions";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
 const {
@@ -19,6 +19,7 @@ const {
 <html lang="en" data-theme="dark">
   <head>
     <BaseHead title={title} description={description} image={image} />
+    <ViewTransitions />
   </head>
 
   <body class="scrollbar-hide">
